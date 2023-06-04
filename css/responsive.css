@@ -1,0 +1,266 @@
+@media (max-width:768px){
+	.col-sm-1{
+		width:8.33% !important;
+		padding:0 10px;
+	}
+	.col-sm-2{
+		width:16.66% !important;
+		padding:0 10px;
+	}
+	.col-sm-3{
+		width:25% !important;
+		padding:0 10px;
+	}
+	.col-sm-4{
+		width:33.33% !important;
+		padding:0 10px;
+	}
+	.col-sm-5{
+		width:41.66% !important;
+		padding:0 10px;
+	}
+	.col-sm-6{
+		width:50% !important;
+		padding:0 10px;
+	}
+	.col-sm-7{
+		width:58.33% !important;
+		padding:0 10px;
+	}
+	.col-sm-8{
+		width:66.66% !important;
+		padding:0 10px;
+	}
+	.col-sm-9{
+		width:75% !important;
+		padding:0 10px;
+	}
+	.col-sm-10{
+		width:83.33% !important;
+		padding:0 10px;
+	}
+	.col-sm-11{
+		width:91.66% !important;
+		padding:0 10px;
+	}
+	.col-sm-12{
+		width:100% !important;
+		padding:0 10px;
+	}
+	/*header*/
+	.res-sm-head1-flex{
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+	}
+	.logo i,.logo span{
+		font-size:30px;
+	}
+	.d-none{
+		display:none;
+	}
+	.bt-button{
+		display:flex;
+		justify-content:end;
+		align-items:center;
+	}
+	.bt-button i{
+		display:inline-block;
+		font-size:25px;
+		font-weight:900;
+		color:white;
+		padding:0 10px;
+	}
+	/*section-1*/
+	.sec1-sm-padding{
+		padding:15px 0;
+	}
+	.sec1-sm-padding p::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:43%;
+		background-color:red;
+		height:5px;
+		width:55px;
+	}
+	/**/
+	.sec3-sm-padding{
+		padding:15px 0;
+	}
+	.sec3-sm-padding .Event-schedule-child p::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:43%;
+		background-color:red;
+		height:5px;
+		width:55px;
+	}
+	/**/
+	.event-sm-flex{
+		display:flex;
+		flex-wrap:wrap;
+	}
+	/**/
+	.sec4-sm-padding{
+		padding:15px 0;
+	}
+	.sec4-sm-padding p::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:43%;
+		background-color:red;
+		height:5px;
+		width:55px;
+	}
+	.sec4-sm-padding{
+		padding:10px 15px;
+	}
+	.sec4-sm-words-padding{
+		padding:10px 15px;
+	}
+	.sec4-sm .sec4-sm-words-padding .event-img .event-img-cnt h1{
+		font-size:20px;
+	}
+	.sec4-sm .sec4-sm-words-padding .event-img .event-img-cnt p{
+		font-size:16px;
+	}
+	/**/
+	.sec5-sm-padding{
+		padding:15px 0;
+	}
+	.sec5-sm-padding p::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:43%;
+		background-color:red;
+		height:5px;
+		width:55px;
+	}
+	.sec5-row-sm-padding{
+		padding:40px 0;
+	}
+	/**/
+	.sec6-sm-padding{
+		padding:15px 0;
+	}
+	.sec6-sm-padding p::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:43%;
+		background-color:red;
+		height:5px;
+		width:55px;
+	}
+		/**/
+	.sec7-sm-padding{
+		padding:15px 0;
+	}
+	.sec7-sm-padding h1::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:37%;
+		background-color:red;
+		height:5px;
+		width:55px;
+	}
+	.sm-row-spacing{
+		padding:10px 60px;
+	}
+}
+@media (min-width:768px)and (max-width:999px){
+	.col-md-1{
+		width:8.33% !important;
+		padding:0 10px;
+	}
+	.col-md-2{
+		width:16.66% !important;
+		padding:0 10px;
+	}
+	.col-md-3{
+		width:25% !important;
+		padding:0 10px;
+	}
+	.col-md-4{
+		width:33.33% !important;
+		padding:0 10px;
+	}
+	.col-md-5{
+		width:41.66% !important;
+		padding:0 10px;
+	}
+	.col-md-6{
+		width:50% !important;
+		padding:0 10px;
+	}
+	.col-md-7{
+		width:58.33% !important;
+		padding:0 10px;
+	}
+	.col-md-8{
+		width:66.66% !important;
+		padding:0 10px;
+	}
+	.col-md-9{
+		width:75% !important;
+		padding:0 10px;
+	}
+	.col-md-10{
+		width:83.33% !important;
+		padding:0 10px;
+	}
+	.col-md-11{
+		width:91.66% !important;
+		padding:0 10px;
+	}
+	.col-md-12{
+		width:100% !important;
+		padding:0 10px;
+	}
+	/*header*/
+	.res-md-head1-flex{
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+	}
+	.logo i,.logo span{
+		font-size:30px;
+	}
+	.d-none{
+		display:none;
+	}
+	.bt-button{
+		display:flex;
+		justify-content:end;
+		align-items:center;
+	}
+	.bt-button i{
+		display:inline-block;
+		font-size:25px;
+		font-weight:900;
+		color:white;
+		padding:0 10px;
+	}
+	/**/
+	.sec4-sm .sec4-md-words-padding .event-img .event-img-cnt h1{
+		font-size:20px;
+	}
+	.sec4-sm .sec4-md-words-padding .event-img .event-img-cnt p{
+		font-size:16px;
+	}
+	/**/
+	.sec1-md-padding{
+		padding:10px 10px;
+	}
+	/**/
+	.sec4-sm-flex{
+		display:flex;
+		justify-content:center;
+	}
+	
+}
