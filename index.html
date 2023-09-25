@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>flex-services</title>
+	<title>Event</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
@@ -16,36 +16,40 @@
 		<div class="container">
 			<div class="row head-padding res-sm-head1-flex res-md-head1-flex">
 				<!--logo-->
-				<div class="col-3 col-sm-6 col-md-6">
+				<div class="col-8 col-sm-6 col-md-4 col-lg-2">
 					<div class="logo">
 						<i class="fa fa-map-marker" aria-hidden="true"> <span>TheEvent</span></i>
 					</div>
 				</div>
 				<!--menu list-->
-				<div class="col-7 d-none">
+				<div class="col-lg-7 d-none d-md-none d-lg-block">
 					<div class="menu-list">
 						<ul class="row list-items">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Speaker</a></li>
-							<li><a href="#">Schedule</a></li>
-							<li><a href="#">Venue</a></li>
-							<li><a href="#">Hotels</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Sponsers</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#Home">Home</a></li>
+							<li><a href="#About">About</a></li>
+							<li><a href="#Speaker">Speaker</a></li>
+							<li><a href="#Schedule">Schedule</a></li>
+							<li><a href="#Venue">Venue</a></li>
+							<li><a href="#Hotels">Hotels</a></li>
+							<li><a href="#Gallery">Gallery</a></li>
+							<li><a href="#Sponsers">Sponsers</a></li>
+							<li><a href="#Contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-2 col-sm-6 col-md-6">
+				<div class="col-2 col-sm-6 col-md-5 col-lg-2 d-none d-md-block">
 					<div class="bt-button">
-						<a href="#" class="btn">Buy Tickets</a>
-						<a href="#"><i class="bi bi-list res-sec1-sm-mnu-icon"></i></a>
+						<a href="#" class="btn">Buy Tickets</a> 
+					</div>
+				</div>
+				<div class="col-2 col-sm-6 col-md-1 d-block d-lg-none">
+					<div class="col-6">
+						<i class="bi bi-list" onClick="openMenuBar()" style="color:white;font-size: 30px;"></i>
 					</div>
 				</div>
 			</div>
 				<!--contents-->
-				<div class="col-12">
+				<div class="col-12" id="Home">
 					<div class="cnt">
 						<div class="cnt1">
 							<h1>THE ANNUAL<br>
@@ -61,22 +65,22 @@
 				</div>
 		</div>
 		<!--about event-->
-		<div class="Event">
+		<div class="Event" id="About">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 col-sm-12">
+					<div class="col-12 col-sm-12 col-md-6">
 						<div class="Event-cnt">
 							<h1>About The Event</h1>
 							<p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in est ut optio sequi unde.</p>
 						</div>
 					</div>
-					<div class="col-3 col-sm-12">
+					<div class="col-12 col-sm-12 col-md-3">
 						<div class="Event-cnt">
 							<h1>WHERE</h1>
 							<p>Downtown Conference Center, New York</p>
 						</div>
 					</div>
-					<div class="col-3 col-sm-12">
+					<div class="col-12 col-sm-12 col-md-3">
 						<div class="Event-cnt">
 							<h1>WHEN</h1>
 							<p>Monday to Wednesday 10-12 December</p>
@@ -87,102 +91,126 @@
 		</div>			
 	</header>
 	
-	<!--section1-->
-	<section id="section1">
-		<div class="container"> 
-			<div class="col-12 Event-speakers-cnt col-sm-12 sec1-sm-padding">
-				<h1>EVENT SPEAKERS</h1>
-				<p>Here are some of our speakers</p>
+	<!-- responsive navbar -->
+	<section class="menubar d-none" id="menubar">
+		<div class="row" style="margin-top: 30px;">
+			<ul class="menubar-ul col-10 col-sm-10 col-md-10" style="text-align: center;">
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Speaker">Speaker</a></li>
+				<li><a href="#Schedule">Schedule</a></li>
+				<li><a href="#Venue">Venue</a></li>
+				<li><a href="#Hotels">Hotels</a></li>
+				<li><a href="#Gallery">Gallery</a></li>
+				<li><a href="#Sponsers">Sponsers</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+
+			<div class="col-1 col-sm-1 col-md-1" style="text-align: end;">
+				<i class="bi bi-x-lg" onClick="menubarClose()"></i>
 			</div>
-			<!--speaker image and details-->
-			<div class="row">
-				<div class="col-4 sec1-padding col-sm-12 sec1-sm-padding col-md-6 sec1-md-padding">
-					<div class="pos-relative">
-						<img src="image/Brenden.jpg" alt="Brenden" width="100%" style="display:block;">
-					
-						<div class="col-12 details">
-							<h3>Brenden Legros</h3>
-							<p>Quas alias incidunt</p>
-							<div class="social">
-								<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+		</div>
+	</section>
+
+
+	<!--section1-->
+	<section id="Speaker">
+		<div id="section1">
+			<div class="container"> 
+				<div class="col-12 Event-speakers-cnt col-sm-12 sec1-sm-padding">
+					<h3>EVENT SPEAKERS</h3>
+					<p>Here are some of our speakers</p>
+				</div>
+				<!--speaker image and details-->
+				<div class="row">
+					<div class="col-12 sec1-padding col-sm-12 sec1-sm-padding col-md-6 col-lg-4 sec1-md-padding">
+						<div class="pos-relative">
+							<img src="image/Brenden.jpg" alt="Brenden" width="100%" height="300px" style="display:block;">
+						
+							<div class="col-12 col-sm-12 col-md-12 details">
+								<h3>Brenden Legros</h3>
+								<p>Quas alias incidunt</p>
+								<div class="social">
+									<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 sec1-padding col-sm-12 sec1-sm-padding col-md-6 sec1-md-padding">
-					<div class="pos-relative">
-						<img src="image/Hubert.jpg" alt="Hubert" width="100%" style="display:block;">
-						<div class="col-12 details">
-							<h3>Hubert Hirthe</h3>
-							<p>Consequuntur odio aut</p>
-							<div class="social">
-								<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<div class="col-12 sec1-padding col-sm-12 sec1-sm-padding col-md-6 col-lg-4 sec1-md-padding">
+						<div class="pos-relative">
+							<img src="image/Hubert.jpg" alt="Hubert" width="100%" height="300px" style="display:block;">
+							<div class="col-12 col-sm-12 col-md-12 details">
+								<h3>Hubert Hirthe</h3>
+								<p>Consequuntur odio aut</p>
+								<div class="social">
+									<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 sec1-padding col-sm-12 sec1-sm-padding col-md-6 sec1-md-padding">
-					<div class="pos-relative">
-						<img src="image/Cole.jpg" alt="Cole" width="100%" style="display:block;">
-						<div class="col-12 details">
-							<h3>Cole Emmerich</h3>
-							<p>Fugiat laborum et</p>
-							<div class="social">
-								<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<div class="col-12 sec1-padding col-sm-12 sec1-sm-padding col-md-6 col-lg-4 sec1-md-padding">
+						<div class="pos-relative">
+							<img src="image/Cole.jpg" alt="Cole" width="100%" height="300px" style="display:block;">
+							<div class="col-12 col-sm-12 col-md-12 details">
+								<h3>Cole Emmerich</h3>
+								<p>Fugiat laborum et</p>
+								<div class="social">
+									<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 sec1-padding col-sm-12 sec1-sm-padding col-md-6 sec1-md-padding">
-					<div class="pos-relative">
-						<img src="image/Jack.jpg" alt="Jack" width="100%" style="display:block;">
-						<div class="col-12 details">
-							<h3>Jack Christiansen</h3>
-							<p>Debitis iure vero</p>
-							<div class="social">
-								<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<div class="col-12 sec1-padding col-sm-12 sec1-sm-padding col-md-6 col-lg-4 sec1-md-padding">
+						<div class="pos-relative">
+							<img src="image/Jack.jpg" alt="Jack" width="100%" height="300px" style="display:block;">
+							<div class="col-12 col-sm-12 col-md-12 details">
+								<h3>Jack Christiansen</h3>
+								<p>Debitis iure vero</p>
+								<div class="social">
+									<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 sec1-padding col-sm-12 sec1-sm-padding col-md-6 sec1-md-padding">
-					<div class="pos-relative">
-						<img src="image/Alejandrin.jpg" alt="Alejandrin" width="100%" style="display:block;">
-						<div class="col-12 details">
-							<h3>Alejandrin Littel</h3>
-							<p>aQui molestiae natus</p>
-							<div class="social">
-								<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<div class="col-12 sec1-padding col-sm-12 sec1-sm-padding col-md-6 col-lg-4 sec1-md-padding">
+						<div class="pos-relative">
+							<img src="image/Alejandrin.jpg" alt="Alejandrin" width="100%" height="300px" style="display:block;">
+							<div class="col-12 col-sm-12 col-md-12 details">
+								<h3>Alejandrin Littel</h3>
+								<p>aQui molestiae natus</p>
+								<div class="social">
+									<a href><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								</div>
 							</div>
-						</div>
-					</div>						
-				</div>
-				<div class="col-4 sec1-padding col-sm-12 sec1-sm-padding col-md-6 sec1-md-padding">
-					<div class="pos-relative">
-					<img src="image/Willow.jpg" alt="Willow"  width="100%" style="display:block;">
-						<div class="col-12 details">
-							<h3>Willow Trantow</h3>
-							<p>Non autem dicta</p>
-							<div class="col-12 social">
-								<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-								<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-								<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+						</div>						
+					</div>
+					<div class="col-12 sec1-padding col-sm-12 sec1-sm-padding col-md-6 col-lg-4 sec1-md-padding ">
+						<div class="pos-relative">
+						<img src="image/Willow.jpg" alt="Willow"  width="100%" height="300px" style="display:block;">
+							<div class="col-12 col-sm-12 col-md-12 details">
+								<h3>Willow Trantow</h3>
+								<p>Non autem dicta</p>
+								<div class="col-12 social">
+									<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+									<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+									<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -191,295 +219,297 @@
 		</div>
 	</section>
 	<!--section-3-->
-	<section id="sec3">
-		<div class="sec-3-container">
-			<div class="col-12 Event-schedule-heading col-sm-12 sec3-sm-padding">
-				<div class="Event-schedule-child">
-					<h1>EVENT SCHEDULE</h1>
-					<p>Here is our event schedule</p>
-				</div>				
+	<section id="Schedule">
+		<div id="sec3">
+			<div class="sec-3-container">
+				<div class="col-12 Event-schedule-heading col-sm-12 sec3-sm-padding">
+					<div class="Event-schedule-child">
+						<h3>EVENT SCHEDULE</h3>
+						<p>Here is our event schedule</p>
+					</div>				
+				</div>
+				<div class="Event-schedule-child1">
+						<a href="#Event-button1 " class="col-12 Event-button1 event-flex event-target1 col-sm-6 col-md-3 col-lg-2">Day 1</a>
+						<a href="#Event-button2" class="col-12 Event-button1 event-flex event-target1 col-sm-6 col-md-3 col-lg-2">Day 2</a>
+						<a href="#Event-button3" class="col-12 Event-button1 event-flex event-target1 col-sm-6 col-md-3 col-lg-2">Day 3</a>
+				</div>
+				<!--event list 1-->	
+				<!---->
+			<div class="event-target1 col-sm-12">
+				<div id="Event-button1" class="event-target1-1">
+					<div class="row event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>9.30Am</time>
+						</div>
+						<div class="col-4 col-sm-6 col-md-4">					
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<h1>Registration</h1> 
+							<h4>Fugit voluptas iusto maiores temporibus autem numquam magnam.</h4>
+						</div>
+					</div>
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>10.00Am</time>
+						</div>
+						<div class="col-4 event-list-img col-sm-6 col-md-4">
+							<img src="image/Brenden.jpg" alt="Brenden">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div>
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>11.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Hubert.jpg" alt="Hubert">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div>
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>12.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Cole.jpg" alt="Cole">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>2.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Jack.jpg" alt="Brenden">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>3.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Alejandrin.jpg" alt="Alejandrin">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>4.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Willow.jpg" alt="Willow">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+				</div>		 
 			</div>
-			<div class="Event-schedule-child1">
-					<a href="#Event-button1 " class="col-2 Event-button1 event-flex event-target1 col-sm-4">Day 1</a>
-					<a href="#Event-button2" class="col-2 Event-button2 event-flex event-target2 col-sm-4">Day 2</a>
-					<a href="#Event-button3" class="col-2 Event-button3 event-flex event-target3 col-sm-4">Day 3</a>
+			<!--event list 2-->	
+			<div class="event-target2 col-sm-12">
+				<div id="Event-button2" class="event-target2-1">
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>10.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Brenden.jpg" alt="Brenden">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div>
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>11.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Hubert.jpg" alt="Hubert">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div>
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>12.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Cole.jpg" alt="Cole">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>2.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Jack.jpg" alt="Brenden">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>3.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Alejandrin.jpg" alt="Alejandrin">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>4.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Willow.jpg" alt="Willow">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+				</div>		 
 			</div>
-			<!--event list 1-->	
-			<!---->
-		 <div class="event-target1 col-sm-12">
-			<div id="Event-button1" class="event-target1-1">
-				<div class="row event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>9.30Am</time>
+			<!--event list 3-->	
+			<div class="event-target3 col-sm-12">
+				<div id="Event-button3" class="event-target3-1">
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>4.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Willow.jpg" alt="Willow">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>10.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Brenden.jpg" alt="Brenden">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
 					</div>
-					<div class="col-3 col-sm-6 col-md-4">					
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>11.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Hubert.jpg" alt="Hubert">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
 					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<h1>Registration</h1> 
-						<h4>Fugit voluptas iusto maiores temporibus autem numquam magnam.</h4>
-					</div>
-				</div>
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>10.00Am</time>
-					</div>
-					<div class="col-3 event-list-img col-sm-6 col-md-4">
-						<img src="image/Brenden.jpg" alt="Brenden">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div>
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>11.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Hubert.jpg" alt="Hubert">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div>
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>12.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Cole.jpg" alt="Cole">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>2.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Jack.jpg" alt="Brenden">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>3.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Alejandrin.jpg" alt="Alejandrin">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>4.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Willow.jpg" alt="Willow">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-			</div>		 
-		</div>
-		<!--event list 2-->	
-		 <div class="event-target2 col-sm-12">
-			<div id="Event-button2" class="event-target2-1">
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>10.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Brenden.jpg" alt="Brenden">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div>
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>11.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Hubert.jpg" alt="Hubert">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div>
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>12.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Cole.jpg" alt="Cole">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>2.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Jack.jpg" alt="Brenden">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>3.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Alejandrin.jpg" alt="Alejandrin">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>4.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Willow.jpg" alt="Willow">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-			</div>		 
-		</div>
-		<!--event list 3-->	
-		 <div class="event-target3 col-sm-12">
-			<div id="Event-button3" class="event-target3-1">
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>4.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Willow.jpg" alt="Willow">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>10.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Brenden.jpg" alt="Brenden">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div>
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>11.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Hubert.jpg" alt="Hubert">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div>
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>12.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Cole.jpg" alt="Cole">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>2.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Jack.jpg" alt="Brenden">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
-				<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
-					<div class="col-2 col-sm-6 col-md-4">
-						<time>3.00Am</time>
-					</div>
-					<div class="col-3 col-sm-6 event-list-img col-md-4">
-						<img src="image/Alejandrin.jpg" alt="Alejandrin">
-					</div>
-					<div class="col-7 col-sm-12 event-list-cnt col-md-4">
-						<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
-						<h4>Facere provident incidunt quos voluptas.</h4>
-					</div>
-				</div> 
-				<!---->
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>12.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Cole.jpg" alt="Cole">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>2.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Jack.jpg" alt="Brenden">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
+					<div class="row event-target1-2 event-align-center border-btm event-sm-flex">
+						<div class="col-8 col-sm-6 col-md-4">
+							<time>3.00Am</time>
+						</div>
+						<div class="col-4 col-sm-6 event-list-img col-md-4">
+							<img src="image/Alejandrin.jpg" alt="Alejandrin">
+						</div>
+						<div class="col-12 col-sm-12 event-list-cnt col-md-4 sm-padding">
+							<b>Libero corrupti explicabo itaque.</b><i>Brenden Legros</i>
+							<h4>Facere provident incidunt quos voluptas.</h4>
+						</div>
+					</div> 
+					<!---->
 
-			</div>		 
+				</div>		 
+			</div>
 		</div>
 	</section>
 	
 	<!--section-4-->
-	<section>
+	<section id="Venue">
 		<div class="container">
 			<div class="col-12 Event-venue-heading col-sm-12 sec4-sm-padding">
-				<h1>EVENT VENUE</h1>
+				<h3>EVENT VENUE</h3>
 				<p>Event venue location info and gallery</p>					
 			</div>
 				<div class="row sec3-padding sec4-sm">
-					<div class="col-6 col-sm-12 sec4-sm-padding">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-5 sec4-sm-padding">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15766.307574732797!2d77.37185729633804!3d8.918867408208675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b042627cf85f8b3%3A0xf54111296f455f1b!2sPavoorchatram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1684064239417!5m2!1sen!2sin" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
-					<div class="col-6 sec4-sm-words-padding col-sm-12 sec4-md-words-padding">
+					<div class="col-12 sec4-sm-words-padding col-sm-12 col-md-6 col-lg-7 sec4-md-words-padding">
 						<div class="event-img">							 
-							<div class="col-8 event-img-cnt">
+							<div class="col-12 col-md-12 col-lg-12 event-img-cnt">
 								<h1>Downtown Conference Center, New York</h1>
 								<p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
 							</div>
@@ -487,40 +517,42 @@
 					</div>
 				</div>
 				<div class="row sec4-sm-flex">
-					<div class="col-3 col-padding col-sm-12 col-md-4">
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue1.jpg" alt="venue" width="100%" style="display:block">
 						</div>
 					</div>
-					<div class="col-3 col-padding col-sm-12 col-md-4">
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue2.jpg" alt="venue" width="100%" style="display:block">
 						</div>
-					</div><div class="col-3 col-padding col-sm-12 col-md-4">
+					</div>
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue3.jpg" alt="venue" width="100%" style="display:block">
 						</div>
 					</div>
-					<div class="col-3 col-padding col-sm-12 col-md-4">
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue4.jpg" alt="venue" width="100%" style="display:block">
 						</div>
 					</div>
-					<div class="col-3 col-padding col-sm-12 col-md-4">
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue5.jpg" alt="venue" width="100%" style="display:block">
 						</div>
 					</div>
-					<div class="col-3 col-padding col-sm-12 col-md-4">
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue6.jpg" alt="venue" width="100%" style="display:block">
 						</div>
-					</div><div class="col-3 col-padding col-sm-12 col-md-4">
+					</div>
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue7.jpg" alt="venue" width="100%" style="display:block">
 						</div>
 					</div>
-					<div class="col-3 col-padding col-sm-12 col-md-4">
+					<div class="col-12 col-padding col-sm-12 col-md-4 col-lg-3">
 						<div class="sec3-venue-img">
 							<img src="image/venue8.jpg" alt="venue" width="100%" style="display:block">
 						</div>
@@ -529,71 +561,73 @@
 	</section>
 	
 	<!--section-5-->
-	<section id="hotels-padding">
-	<div class="container">
-		<div class="col-12 hotels col-sm-12 sec5-sm-padding">
-			<div class="hotels-heading">
-				<h1>HOTELS</h1>
-				<p>Her are some nearby hotels</p>				 
-			</div>
-		</div>			
-		<div class="row">
-			<div class="col-4 col-sm-12 sec5-row-sm-padding">
-				<div class="hotel-list">
-					<img src="image/hotel1.jpg" alt="hotel1" style="display:block">
-					<div class="hotel-list-details">
-						<a href="#">Hotel 1</a>
-						<div class="star">
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true"></i>
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true"></i>
-						</div>
-						<i>0.4 Mile from the Venue</i>
+	<section id="Hotels">
+		<div  id="hotels-padding" style="background-color: #8080801f;">
+			<div class="container">
+				<div class="col-12 hotels col-sm-12 sec5-sm-padding">
+					<div class="hotels-heading">
+						<h3>HOTELS</h3>
+						<p>Her are some nearby hotels</p>				 
 					</div>
+				</div>			
+				<div class="row justify-content-center">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 sec5-row-sm-padding">
+						<div class="hotel-list">
+							<img src="image/hotel1.jpg" alt="hotel1" style="display:block">
+							<div class="hotel-list-details">
+								<a href="#">Hotel 1</a>
+								<div class="star">
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+								</div>
+								<i>0.4 Mile from the Venue</i>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 sec5-row-sm-padding">
+						<div class="hotel-list">
+							<img src="image/hotel2.jpg" alt="hotel1" style="display:block">
+							<div class="hotel-list-details">
+								<a href="#">Hotel 2</a>
+								<div class="star">
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+									<i class="fa fa-star-o" aria-hidden="true" ></i>							 
+								</div>
+								<i>0.5 Mile from the Venue</i>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 sec5-row-sm-padding">
+						<div class="hotel-list">
+							<img src="image/hotel3.jpg" alt="hotel1" style="display:block">
+							<div class="hotel-list-details">
+								<a href="#">Hotel 3</a>
+								<div class="star">
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+									<i class="fa fa-star-o" aria-hidden="true" ></i>
+								</div>
+								<i>0.6 Mile from the Venue</i>
+							</div>
+						</div>
+					</div>			 
 				</div>
 			</div>
-			<div class="col-4 col-sm-12 sec5-row-sm-padding">
-				<div class="hotel-list">
-					<img src="image/hotel2.jpg" alt="hotel1" style="display:block">
-					<div class="hotel-list-details">
-						<a href="#">Hotel 2</a>
-						<div class="star">
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true"></i>
-							<i class="fa fa-star-o" aria-hidden="true" ></i>							 
-						</div>
-						<i>0.5 Mile from the Venue</i>
-					</div>
-				</div>
-			</div>
-			<div class="col-4 col-sm-12 sec5-row-sm-padding">
-				<div class="hotel-list">
-					<img src="image/hotel3.jpg" alt="hotel1" style="display:block">
-					<div class="hotel-list-details">
-						<a href="#">Hotel 3</a>
-						<div class="star">
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-							<i class="fa fa-star-o" aria-hidden="true"></i>
-							<i class="fa fa-star-o" aria-hidden="true" ></i>
-						</div>
-						<i>0.6 Mile from the Venue</i>
-					</div>
-				</div>
-			</div>			 
 		</div>
-	</div>
 	</section>
 	
 	<!--section-6-->
-	<section>
+	<section id="Gallery">
 		<div class="container">
 			<div class="col-12 gallery col-sm-12 sec6-sm-padding">
 				<div class="gallery-heading">
-					<h1>GALLERY</h1>
+					<h3>GALLERY</h3>
 					<p>Check our gallery from the recent events</p>
 				</div>
 			</div>
@@ -611,95 +645,96 @@
 	</section>
 	
 	<!--section-7-->
-	<section>
+	<section id="Sponsers" style="background-color: #8080801f;padding-bottom: 50px;">
 		<div class="container col-sm-12 sec7-sm-padding">
 			<div class="col-12 sponser">
 				<div class="sponser-heading">
-					<h1>SPONSER</h1>
+					<h3>SPONSER</h3>
 				</div>
 			</div>
 			<div class="row row-spacing sm-row-spacing">
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser1.png" alt="sponser" width="100%" height="100px" style="display:block">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser1.png" alt="sponser" width="60%" height="60px" style="display:block">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser2.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser2.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser3.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser3.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser4.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser4.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser5.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser5.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser6.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser6.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser7.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding ">
+						<img src="image/sponser7.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>
-				<div class="col-2 sponser-img-padding col-sm-12 col-md-3">
-					<div class="sponser-box-shadow">
-						<img src="image/sponser8.png" alt="sponser" width="100%" height="100px">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="sponser-box-shadow sponser-img-padding">
+						<img src="image/sponser8.png" alt="sponser" width="60%" height="60px">
 					</div>
 				</div>				 
 			</div>
 		</div>
 	</section>
+
 	<!--section-8-->
 	<section>
 		<div class="sec8-container">
 			<div class="faq-heading">
-				<h1>F.A.Q</h1>
+				<h3>F.A.Q</h3>
 			</div>
 			<div class="row sec8-padding">
-				<div class="col-12 faq">
+				<div class="col-12 col-md-12 faq">
 					<details class="faq-1">
 						<summary>Non consectetur a erat nam at lectus urna duis?</summary>
 						<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
 					</details>
 				</div>
-				<div class="col-12 faq">
+				<div class="col-12 col-md-12 faq">
 					<details class="faq-1">
 						<summary>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</summary>
 						<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
 					</details>
 				</div>
-				<div class="col-12 faq">
+				<div class="col-12 col-md-12 faq">
 					<details class="faq-1">
 						<summary>Non consectetur a erat nam at lectus urna duis?</summary>
 						<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
 					</details>
 				</div>
-				<div class="col-12 faq">
+				<div class="col-12 col-md-12 faq">
 					<details class="faq-1">
 						<summary>Non consectetur a erat nam at lectus urna duis?</summary>
 						<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
 					</details>
 				</div>
-				<div class="col-12 faq">
+				<div class="col-12 col-md-12 faq">
 					<details class="faq-1">
 						<summary>Non consectetur a erat nam at lectus urna duis?</summary>
 						<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
 					</details>
 				</div>
-				<div class="col-12 faq">
+				<div class="col-12 col-md-12 faq">
 					<details class="faq-1">
 						<summary>Non consectetur a erat nam at lectus urna duis?</summary>
 						<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
@@ -708,5 +743,213 @@
 			</div>
 		</div>
 	</section>
+	
+	<!--section-9-->
+	<section class="section9">
+		<div class="sec9-container">
+			<div class="col-12 section-newsletter">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 sec9-head">
+					<h3>NEWSLETTER</h3>
+					<p>Rerum numquam illum recusandae quia mollitia consequatur</p>
+				</div>
+				<form class="col-12 col-sm-12 col-md-8 col-lg-6 section9-form">
+					<input class="col-12 col-md-8 col-lg-8" type="email" placeholder="Enter your email">
+					<button class="col-12 col-md-3 col-lg-3" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!--section-10-->
+	<section style="background-color: #8080801f;padding: 20px;">
+		<div class="sec10-container">
+			<div class="col-12 section10-flex">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 sec10-head">
+					<h3>BUY TICKETS</h3>
+					<p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 sec10-card-flex">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 sec10-res-padding">
+						<div class="sec10-card">
+							<div class="col-12 card-head">
+								<h1 style="color:gray;font-size: 16px;">STANDARD ACCESS</h1>
+								<p style="font-size: 25px;"><i class="bi bi-currency-dollar"></i>150</p>
+							</div>
+							<ul class="card-ul">
+								<li>Regular Seating</li>
+								<li>Coffee Break</li>
+								<li>Custom Badge</li>
+								<li style="color: gray;">Community Access</li>
+								<li style="color: gray;">Workshop Access</li>
+								<li style="color: gray;">After Party</li>
+							</ul>
+							<form class="card-btn col-12">
+								<button>Buy Now</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 sec10-res-padding">
+						<div class="sec10-card">
+							<div class="col-12 card-head">
+								<h1 style="color:gray;font-size: 16px;">PRO ACCESS</h1>
+								<p style="font-size: 25px;"><i class="bi bi-currency-dollar"></i>250</p>
+							</div>
+							<ul class="card-ul">
+								<li>Regular Seating</li>
+								<li>Coffee Break</li>
+								<li>Custom Badge</li>
+								<li>Community Access</li>
+								<li style="color: gray;">Workshop Access</li>
+								<li style="color: gray;">After Party</li>
+							</ul>
+							<form class="card-btn col-12">
+								<button>Buy Now</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 sec10-res-padding">
+						<div class="sec10-card">
+							<div class="col-12 card-head">
+								<h1 style="color:gray;font-size: 16px;">PREMIUM ACCESS</h1>
+								<p style="font-size: 25px;"><i class="bi bi-currency-dollar"></i>350</p>
+							</div>
+							<ul class="card-ul">
+								<li>Regular Seating</li>
+								<li>Coffee Break</li>
+								<li>Custom Badge</li>
+								<li>Community Access</li>
+								<li>Workshop Access</li>
+								<li>After Party</li>
+							</ul>
+							<form class="card-btn col-12">
+								<button>Buy Now</button>
+							</form>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+
+	<section id="Contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 sec10-head">
+					<h3>CONTACT US</h3>
+					<p>Nihil officia ut sint molestiae tenetur.</p>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 row sec11-padd">
+					<div class="col-12 col-md-4">
+						<div class="border-0">
+							<div class="card-body text-center">
+								<div class="col-12 contact-icon">
+									<i class="bi bi-geo-alt" style="color:red;"></i>
+								</div>
+								
+								<h4 class="card-titlee">ADDRESS</h4>
+								<address class="card-subitle mb-2 text-muted">A108 Adam Street, NY 535022, USA</address>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="border-0">
+							<div class="card-body text-center">
+								<div class="col-12 contact-icon">
+									<i class="bi bi-phone" style="color:red;"></i>
+								</div>
+								<h4 class="card-titlee">PHONE NUMBER</h4>
+								<a href="tel:+1 5589 55488 55" style="text-decoration: none;">+1 5589 55488 55</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div>
+							<div class="card-body text-center">
+								<div class="col-12 contact-icon">
+									<i class="bi bi-envelope" style="color:red;"></i>
+								</div>
+								<h4 class="card-titlee">EMAIL</h4>
+								<a href="mailto:info@example.com" style="text-decoration: none;">info@example.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<form class="col-12 col-sm-12 col-md-12 col-lg-12 row text-center form-focus">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 my-3">
+						<input type="text" style="width:100%;padding:10px 15px" placeholder="Your Name">
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-md-6 my-3">
+						<input type="email" style="width:100%;padding:10px 15px" placeholder="Your Email">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 my-3">
+						<input type="text" style="width:100%;padding:10px 15px" placeholder="Subject">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 my-3">
+						<textarea style="width:100%;padding:10px 15px" cols="5" rows="10" placeholder="Message"></textarea>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 my-3 form-btn">
+						<a href="#">Send Meassage</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<!--section-10-->
+	<footer style="background-color: black;padding: 30px 0px;">
+		<div class="container">
+			<div class="footer-row">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-4 footer-res-padding">
+					<div class="col-12">
+						<div class="logo">
+							<i class="fa fa-map-marker" aria-hidden="true"> <span>TheEvent</span></i>
+						</div>
+						<p style="color:white">In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-lg-3 footer-res-padding">
+					<div class="footer-div2">
+						<h5 style="color:white">USEFUL LINKS</h5>
+					</div>
+					<ul class="footer-ul">
+						<li><i class="bi bi-chevron-right"></i>Home</li>
+						<li><i class="bi bi-chevron-right"></i>About us</li>
+						<li><i class="bi bi-chevron-right"></i>Services</li>
+						<li><i class="bi bi-chevron-right"></i>Terms of service</li>
+						<li><i class="bi bi-chevron-right"></i>Privacy policy</li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-lg-3 footer-res-padding">
+					<div class="footer-div2">
+						<h5 style="color:white">USEFUL LINKS</h5>
+					</div>
+					<ul class="footer-ul">
+						<li><i class="bi bi-chevron-right"></i>Home</li>
+						<li><i class="bi bi-chevron-right"></i>About us</li>
+						<li><i class="bi bi-chevron-right"></i>Services</li>
+						<li><i class="bi bi-chevron-right"></i>Terms of service</li>
+						<li><i class="bi bi-chevron-right"></i>Privacy policy</li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-lg-2 footer-res-padding">
+					<div class="footer-div2">
+						<h5 style="color:white">CONTACT US</h5>
+					</div>
+					<p style="color:white;padding:3px 0px;">A108 Adam Street</p>
+					<p style="color:white;padding:3px 0px;">New York, NY 535022
+					<p style="color:white;padding:3px 0px;">United States</p>
+					<p style="color:white;padding:3px 0px;"><span style="font-weight: 600;">Phone:</span> +1 5589 55488 55</p>
+					<p style="color:white;padding:3px 0px;"><span style="font-weight: 600;">Email:</span> info@example.com</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="index.js"></script>
 </body>
 </html>
