@@ -201,6 +201,7 @@ html{
 /*Event-schedule starting*/
 #sec3{
 	background-color:#8080801f;
+	margin-top: 60px;
 }
 .sec-3-container{
 	width:80%;
@@ -210,6 +211,9 @@ html{
 .Event-schedule-heading{
 	text-align:center;
 	padding:30px 0;
+}
+.Event-schedule-child{
+	margin-top: 70px;
 }
 .Event-schedule-child h3{
 	padding:10px 0px;
@@ -326,6 +330,7 @@ html{
 	padding:10px 0px;
 	font-size:25px;
 	font-weight:800;
+	margin-top: 70px;
 }
 .Event-venue-heading p{
 	padding:10px 0px 25px;
@@ -386,6 +391,7 @@ html{
 	padding:10px 0px;
 	font-size:25px;
 	font-weight:800;
+	margin-top: 70px;
 }
 .hotels-heading p{
 	padding:10px 0px 25px;
@@ -443,6 +449,7 @@ html{
 	padding:10px 0px;
 	font-size:25px;
 	font-weight:800;
+	margin-top: 70px;
 }
 .gallery-heading p{
 	padding:10px 0px 25px;
@@ -468,6 +475,7 @@ html{
 	padding:30px 0;
 }
 .sponser-heading h3{
+	margin-top: 40px;
 	padding:20px 0px 30px;
 	font-size:25px;
 	font-weight:800;
@@ -507,6 +515,7 @@ html{
 	font-weight:900;
 	position:relative;
 	padding:30px 0;
+	margin-top: 50px;
 }
 .faq-heading h3::after{
 	content:"";
@@ -541,6 +550,7 @@ summary{
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 30px 0;
+	margin-top: 50px;
 }
 .justify-content-center{
 	justify-content: center;
@@ -598,7 +608,9 @@ summary{
 	color: white;
 	border-width: 0px;
 }
-
+#Contact{
+	margin-top: 60px;
+}
 .sec10-container{
 	width:80%;
 	margin:auto;
@@ -613,6 +625,7 @@ summary{
 	text-align: center;
 	font-size: 25px;
 	padding: 10px 0px;
+	margin-top: 80px;
 }
 .sec10-head p{
 	text-align: center;
@@ -651,7 +664,6 @@ summary{
 	text-align: center;
 	border-bottom: 1px solid rgba(128, 128, 128, 0.575);
 	margin: 0px 10px;
-	
 }
 .card-head h1,p{
 	padding: 10px 0px;
@@ -699,6 +711,7 @@ summary{
 }
 .card-body a{
 	padding: 25px 0px;
+	color: black;
 }
 .my-3{
 	margin: 15px 0px;
